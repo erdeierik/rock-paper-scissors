@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+.titleCtn {
+    background-color: #212121;
+    border-radius: 10px;
+    border: 1px solid #ccc; 
+    padding: 20px 0;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    font-family: "Montserrat", serif;
+}
+
+.scoreCtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scoreCtn h3 {
+    margin-top: 0;
+    padding: 20px 0;
+    background-color: #181818;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.score {
+    width: 200px;
+    background-color: #212121;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc; 
+}
+
+.results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    height: 200px;
+}
+
+.playerHand,
+.computerHand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #212121;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid #ccc; 
+}
+
+.resultsWinner {
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    font-weight: bold;
+}
+.resultsMessage {
+    font-size: 22px;
+}
+
+.choiceBtnCtn {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.choiceBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc; 
+}
+
+.playBtn {
+    background-color: #212121;
+    padding: 10px 30px;
+    margin-top:  50px;
+    font-weight: bold;
+    border: 1px solid #ccc; 
+}
+
+.bounce {
+    transition:  all 0.2s ease-in-out;
+}
+
+.bounce:hover {
+    transform:  translateY(-15px);
+}
+
+.activeChoice {
+    background-color: #5D3FD3;
+}
+
+.timer {
+    font-size: 200px;
+}
+
+.playerShake {
+    animation: playerShakeAnimation 0.8s ease-in-out infinite;
+}
+
+.computerShake {
+    animation: computerShakeAnimation 0.8s ease-in-out infinite;
+}
+
+@keyframes playerShakeAnimation {
+    0%,
+    100% {
+        transform: rotate(100deg);
+    }
+
+    50% {
+        transform: rotate(80deg);
+    }
+}
+
+@keyframes computerShakeAnimation {
+    0%,
+    100% {
+        transform: scaleY(-1) rotate(-80deg);
+    }
+
+    50% {
+        transform: scaleY(-1) rotate(-100deg);
+    }
+}
+
+.background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vmax;
+    height: 100vmax;
+    background-color: #5D3FD3;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.3;
+    overflow: hidden;
+    pointer-events: none;
+    filter: blur(170px);
+  }
+
+
+.pulsing {
+    animation: pulse 1s infinite ease-in-out;
+    z-index: 0;
+  }
+
+.winner {
+    background-color: green;
+    z-index: 0;
+}
+
+.loser {
+    background-color: red;
+    z-index: 0;
+}
+
+.draw {
+    background-color: chocolate;
+    z-index: 0;
+}
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes fadeToWhite {
+    0% {
+        background-color: inherit;
+        color: inherit;
+    }
+    100% {
+        background-color: white;
+        color: black;
+    }
+}
+
+

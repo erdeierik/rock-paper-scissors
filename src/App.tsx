@@ -31,11 +31,6 @@ function App() {
     }
   }, [runTimer, timer])
 
-/*   const particlesInit = useCallback(async (engine: any) => {
-    await loadFull(engine); // Loads full tsParticles engine
-  }, []);
- */
-
   const options = [
     {name: 'Kő', icon: <FaRegHandRock size={60} />},
     {name: 'Papír', icon: <FaRegHandPaper size={60} />},

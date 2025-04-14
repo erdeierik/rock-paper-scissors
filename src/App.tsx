@@ -105,6 +105,7 @@ function App() {
     <div className={styles.container}>
       <div className={styles.titleCtn}>
         <h1>Kő, papír, olló</h1>
+        <h3>Készítette: Erdei Erik Martin</h3>
       </div>
       <div className={styles.scoreCtn}>
         <div className={styles.score}>
